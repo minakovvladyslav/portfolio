@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <base href="#" target="_blank" />
+    <title>Product-page</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header header--black">
+        <div class="header__container header__container--wide">
+          <a href="#" class="header__logo" title="main page">
+            <img
+              src="./img/header/logo-black.svg"
+              alt="Info Bao"
+              class="header__img header__img--black"
+            />
+          </a>
+          <nav class="header__nav">
+            <ul class="header__list header__list--white">
+              <li class="header__item">
+                <a href="#" class="header__link link">Home</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link">About Us</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link">Blogs</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link">Cosmetics Info</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link">Contacts</a>
+              </li>
+            </ul>
+            <button class="header__burger header__burger--black">
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <div
+          class="page__bread-crumbs bread-crumbs bread-crumbs--noborder bread-crumbs--nopadding bread-crumbs--nomargin"
+        >
+          <div class="bread-crumbs__container bread-crumbs__container--wide">
+            <a href="#" class="bread-crumbs__item">Mary Kay</a>
+            <a href="#" class="bread-crumbs__item">Moisturization</a>
+          </div>
+        </div>
+        <section class="page__item-info info-item info-item--noborder">
+          <div class="info-item__container info-item__container--wide">
+            <div class="info-item__text">
+              <h1 class="info-item__title title-large">
+                Mary Kay Extra Emollient Night Cream
+              </h1>
+              <h3 class="info-item__sub-title">What is it for?</h3>
+              <ul class="info-item__list">
+                <li class="info-item__point">Age: +18</li>
+                <li class="info-item__point">
+                  Appointment: lifting, ancient, restoration.
+                </li>
+                <li class="info-item__point">Made in: USA</li>
+              </ul>
+              <h3 class="info-item__sub-title">What is it for?</h3>
+              <div class="info-item__paragrapf">
+                <p>
+                  To further moisturize the skin, wet your face with warm water,
+                  then apply a small amount of the cream to your face and neck.
+                </p>
+              </div>
+              <h3 class="info-item__sub-title">What is it for?</h3>
+              <div class="info-item__paragrapf">
+                <p>
+                  Petrolatum, Mineral Oil, Paraffin, Beeswax, Candelilla Wax,
+                  Hydrogenated Soy Glyceride, Fragrance, Carnauba Wax, Stearic
+                  Acid, Propylparaben, Butylparaben, Menthol, Red 17.
+                </p>
+              </div>
+            </div>
+            <div class="info-item__picture">
+              <img
+                srcset="
+                  ./img/information-page/2-2x.jpg 1x,
+                  ./img/information-page/2-2x.jpg 2x,
+                  ./img/information-page/2-3x.jpg 3x
+                "
+                src="./img/information-page/2-3x.jpg"
+                alt="#"
+                class="info-item__img"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          class="page__other-products products-other info-item--noborder"
+        >
+          <div
+            class="products-other__container products-other__container--wide"
+          >
+            <h2 class="products-other__title title-medium">
+              Other the same products
+            </h2>
+            <div class="products-other__swiper swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div
+                    class="products-other__cards cards-info cards-info--other-products"
+                  >
+                    <a href="#" class="cards-info__block cards-info--Europian">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/information-page/1-2x.jpg 1x,
+                              ./img/information-page/1-2x.jpg 2x,
+                              ./img/information-page/1-3x.jpg 3x
+                            "
+                            src="./img/information-page/1-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--chi">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/information-page/2-2x.jpg 1x,
+                              ./img/information-page/2-2x.jpg 2x,
+                              ./img/information-page/2-3x.jpg 3x
+                            "
+                            src="./img/information-page/2-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Kerastase Nutritive Masque Magistral
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--chi">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/information-page/3-2x.jpg 1x,
+                              ./img/information-page/3-2x.jpg 2x,
+                              ./img/information-page/3-3x.jpg 3x
+                            "
+                            src="./img/information-page/3-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--chi">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/four-2x.jpg 1x,
+                              ./img/info/four-2x.jpg 2x,
+                              ./img/info/four-3x.jpg 3x
+                            "
+                            src="./img/info/four-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-other__cards cards-info cards-info--other-products">
+                    <a
+                      href="#"
+                      class="cards-info__block cards-info--marioBadescu"
+                    >
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/five-2x.jpg 1x,
+                              ./img/info/five-2x.jpg 2x,
+                              ./img/info/five-3x.jpg 3x
+                            "
+                            src="./img/info/five-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--maryKay">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/six-2x.jpg 1x,
+                              ./img/info/six-2x.jpg 2x,
+                              ./img/info/six-3x.jpg 3x
+                            "
+                            src="./img/info/six-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--tigi">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/three-2x.jpg 1x,
+                              ./img/info/three-2x.jpg 2x,
+                              ./img/info/three-3x.jpg 3x
+                            "
+                            src="./img/info/three-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--shiseido">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/six-2x.jpg 1x,
+                              ./img/info/six-2x.jpg 2x,
+                              ./img/info/six-3x.jpg 3x
+                            "
+                            src="./img/info/six-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-other__cards cards-info cards-info--other-products">
+                    <a
+                      href="#"
+                      class="cards-info__block cards-info--marioBadescu"
+                    >
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/five-2x.jpg 1x,
+                              ./img/info/five-2x.jpg 2x,
+                              ./img/info/five-3x.jpg 3x
+                            "
+                            src="./img/info/five-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--maryKay">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/six-2x.jpg 1x,
+                              ./img/info/six-2x.jpg 2x,
+                              ./img/info/six-3x.jpg 3x
+                            "
+                            src="./img/info/six-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--tigi">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/three-2x.jpg 1x,
+                              ./img/info/three-2x.jpg 2x,
+                              ./img/info/three-3x.jpg 3x
+                            "
+                            src="./img/info/three-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="#" class="cards-info__block cards-info--shiseido">
+                      <figure class="cards-info__item">
+                        <div class="cards-info__picture">
+                          <img
+                            srcset="
+                              ./img/info/six-2x.jpg 1x,
+                              ./img/info/six-2x.jpg 2x,
+                              ./img/info/six-3x.jpg 3x
+                            "
+                            src="./img/info/six-2x.jpg"
+                            alt="product"
+                            class="cards-info__img cards-info__img--other-products"
+                          />
+                        </div>
+                        <figcaption>
+                          Cosrx AC Collection Blemish Spot Clearing Serum
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__body">
+            <div class="footer__column">
+              <h3 class="footer__title">
+                <button tabindex="0" class="footer__button">
+                  Company
+                  <img class="footer__arrow" src="./img/icons/arrow.svg" />
+                </button>
+              </h3>
+              <adress class="footer__info">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#" class="footer__link link">Information</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link link">Contact</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link link">About</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link link">News</a>
+                  </li>
+                </ul>
+              </adress>
+            </div>
+            <div class="footer__column footer__column--borders">
+              <h3 class="footer__title">
+                <button tabindex="0" class="footer__button">
+                  Follow Us<img
+                    class="footer__arrow"
+                    src="./img/icons/arrow.svg"
+                  />
+                </button>
+              </h3>
+              <adress class="footer__info">
+                <ul class="footer__list footer__list">
+                  <li class="footer__item">
+                    <span class="footer__link">South Los Angeles</span>
+                  </li>
+                  <li class="footer__item">
+                    <a href="callto:+1234567890" class="footer__link link"
+                      >+1234567890</a
+                    >
+                  </li>
+                </ul>
+                <span class="footer__span footer__span--padding"
+                  >We always ready speak with you!</span
+                >
+              </adress>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__title">
+                <button tabindex="0" class="footer__button">
+                  Company
+                  <img class="footer__arrow" src="./img/icons/arrow.svg" />
+                </button>
+              </h3>
+              <address class="footer__info">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a
+                      href="mailto:infobao-contact@gmail.com"
+                      class="footer__link link"
+                      >infobao-contact@gmail.com</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" rel="nofollow" class="footer__link link"
+                      >Instagtam</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" rel="nofollow" class="footer__link link"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" rel="nofollow" class="footer__link link"
+                      >Twitter</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <div class="footer__footer">
+            <div class="footer__logo">
+              <img
+                src="./img/header/logo.svg"
+                alt="Info Bao"
+                class="footer__img"
+              />
+            </div>
+            <span class="footer__span footer__span--font-size"
+              >2021 ©infobao. All Rights Reserved.</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

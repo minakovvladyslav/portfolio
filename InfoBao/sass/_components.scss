@@ -1,0 +1,344 @@
+@use "_colors" as *;
+@use "_mixins" as *;
+.link {
+  font-size: inherit;
+  position: relative;
+  &::after {
+    position: absolute;
+    transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
+    content: "";
+    bottom: toRem(-4);
+    left: 50%;
+    height: toRem(2);
+    width: 0;
+    background-color: $color-white;
+  }
+  html:not([data-fls-touch]) & {
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.button-white {
+  font-size: toRem(13);
+  padding-inline: toRem(13);
+  padding-block: toRem(9);
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    border-radius 0.3s;
+  border: toRem(1) solid $color-white;
+  html:not([data-fls-touch]) & {
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+      border-radius: toRem(5);
+    }
+  }
+}
+
+.button-black {
+  font-size: toRem(14);
+  padding-inline: toRem(49);
+  padding-block: toRem(10);
+  display: block;
+  color: $color-black;
+  margin-inline: auto;
+  width: max-content;
+  @include adaptiveValue("margin-top", 140, 40);
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    border-radius 0.3s;
+  border: toRem(1) solid $color-black;
+  html:not([data-fls-touch]) & {
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+      border-radius: toRem(5);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: toRem(36);
+}
+
+.title-large {
+  text-align: center;
+  font-size: toRem(30);
+}
+
+.title-medium {
+  text-align: center;
+  font-size: toRem(24);
+}
+
+.title-small {
+  text-align: center;
+  font-size: toRem(20);
+}
+
+.border-block {
+  border-top: toRem(1) solid $color-border;
+  @include adaptiveValue("padding-top", 71, 30);
+}
+
+.first-section {
+  @include adaptiveValue("padding-top", 212, 135);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, toRem(251)), 1fr));
+  row-gap: toRem(25);
+  @include adaptiveValue("column-gap", 115, 25, 0, 1200, 992);
+
+  // .blogs__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    aspect-ratio: 251 / 315;
+    color: $color-white;
+    // height: max-content;
+  }
+
+  // .blogs__picture
+
+  &__picture {
+    z-index: -2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &::after {
+      content: "";
+      background-color: $color-black;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+  }
+
+  &__subtitle {
+    flex-grow: 1;
+    text-align: center;
+    font-size: toRem(28);
+    align-content: center;
+    padding-top: toRem(20);
+  }
+
+  // .blogs__img
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  // .blogs__link
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+    font-size: toRem(25);
+    padding-bottom: toRem(12);
+    transition: color 0.3s;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: toRem(1);
+      position: absolute;
+      top: toRem(20);
+      left: 0;
+      background-color: transparent;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+    @media (width > toEm(557)) {
+      font-size: toRem(17);
+    }
+    html:not([data-fls-touch]) & {
+      &:hover {
+        &::after {
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.cards-info {
+  &--flex {
+    display: flex;
+  }
+  @include adaptiveValue("padding-top",90, 30);
+  display: grid;
+  width: 100%;
+  @include adaptiveValue("column-gap", 92, 30);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, toRem(200)), 20%));
+  @media (width < toEm(535)) {
+    grid-template-columns: 1fr;
+  }
+  @include adaptiveValue("row-gap", 100, 30);
+  &--other-products {
+    @include adaptiveValue("column-gap", 45, 20);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, toRem(243)), 20%));
+    @media (width < toEm(544)) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(15);
+    // max-width: toRem(200);
+    html:not([data-fls-touch]) & {
+      &:hover {
+        figcaption {
+          color: $color-border;
+        }
+        .cards-info__picture::after {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    figcaption {
+      transition: color 0.3s;
+      font-size: toRem(19);
+      line-height: 1.4;
+      text-transform: capitalize;
+    }
+  }
+
+  // .info__picture
+
+  &__picture {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      transition: opacity 0.3s;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-black;
+      opacity: 0;
+      // z-index: 2;
+    }
+  }
+
+  &__img {
+    background-color: $color-border;
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    aspect-ratio: 200 / 208;
+    object-fit: cover;
+    &--other-products {
+      aspect-ratio: 243 / 241;
+    }
+  }
+}
+
+.cards-list {
+  text-align: center;
+  display: flex;
+  row-gap: toRem(22);
+  justify-content: space-between;
+  @include adaptiveValue("padding-inline",36, 0,0, 1200, 992);
+  min-height: 0;
+  &--column{
+    flex-direction: column;
+  }
+
+  &--row-swiper {
+    flex-direction: row;
+  }
+
+  &--row {
+  overflow-x: auto;
+  column-gap: toRem(20);
+  @media (width < toEm(780)) {
+    padding-inline: toRem(15);
+    margin-inline: toRem(-15);
+  }
+  }
+  &__option{
+    transition: color 0.3s;
+    flex-shrink: 0;
+
+    html:not([data-fls-touch]) & {
+      &:hover {
+        color: $color-border;
+        
+      }
+    }
+  }
+  &__link--active{
+    position: relative;
+    padding-bottom: toRem(10);
+
+    &::after {
+      position: absolute;
+      transition:
+        width 0.3s ease-in-out,
+        left 0.3s ease-in-out;
+      content: "";
+      left: -20%;
+      bottom: 0;
+      height: toRem(1);
+      width: 140%;
+      background-color: $color-black;
+    }
+  }
+}
+
+
+.bread-crumbs {
+  @include adaptiveValue("padding-top",166, 100);
+  color: #ABABAB;
+  margin-bottom: toRem(19);
+		// .bread-crumbs__item
+
+		&__item {
+    html:not([data-fls-touch]) &{
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    &:not(:last-child)::after{
+      content: '/';
+      font-weight: 900;
+      }
+		}
+}
+
+div [class*="__container--wide"] {
+	max-width: toRem(1141);
+}
+

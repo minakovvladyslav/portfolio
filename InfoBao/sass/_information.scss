@@ -1,0 +1,88 @@
+@use "_reset";
+@use "_mixins" as *;
+@use "_colors" as *;
+@use "_components" as *;
+
+.page {
+
+		// .page__information
+
+		&__information {
+		}
+}
+.information {
+
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 45, 25);
+  }
+		// .information__container
+
+		&__container {
+		}
+
+		// .information__body
+
+		&__body {
+		}
+
+    &__title {
+      @include adaptiveValue("margin-bottom", 79, 30);
+    }
+		// .information__list
+
+		&__list {
+		}
+
+		// .information__cards
+
+		&__cards {
+      
+}
+
+.information__item {
+  &:not([class*="--nomargin"]) {
+		@include adaptiveValue("margin-bottom", 43, 35);
+	}
+
+	&:not([class*="--noborder"]) { 
+		border-bottom: toRem(1) solid $color-border;
+	}
+			@include adaptiveValue("padding-bottom", 66, 30);
+		}
+}
+
+.cards-list {
+
+		// .cards-list__option
+
+		&__option {
+		}
+
+		// .cards-list__link
+
+		&__link {
+		}
+
+		// .cards-list__link--active
+
+		&__link--active {
+		}
+}
+.cards-info {
+
+		// .cards-info__item
+
+		&__item {
+		}
+
+		// .cards-info__picture
+
+		&__picture {
+		}
+
+		// .cards-info__img
+
+		&__img {
+		}
+}
+
