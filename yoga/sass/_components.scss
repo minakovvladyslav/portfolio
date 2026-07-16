@@ -1,0 +1,87 @@
+@use"_mixins" as*;
+@use"_typo" as*;
+
+.cickle-button {
+  display: flex;
+  cursor: default;
+  align-items: center;
+  &__link {
+    z-index: 3;
+    margin-left: toRem(-33);
+    display: flex;
+    align-items: center;
+    gap: toRem(6);
+    transition: color 0.3s;
+    html:not([data-fls-touch]) &{
+      &:hover{
+        cursor: pointer;  
+        color:(var(--gold));
+      }
+    }
+  }
+}
+
+.cickle-button--reverse {
+  display: flex; 
+  align-items: center;
+  .cickle-button__img--reverse {
+    margin-left: toRem(-39);
+  }
+
+  img {
+    rotate: -180deg;
+  }
+}
+
+.decoration {
+  position: absolute;
+  z-index: -10;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.button {
+  @include types("");
+  text-transform: capitalize;
+  @include adaptiveValue("padding-inline", 50, 35, 0 1230, 950);
+  padding-block: toRem(10);
+  background-color: var(--gold);
+  color: #fff;
+  border-radius: toRem(15);
+  font-size: toRem(17);
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  html:not([data-fls-touch]) & {
+    &:hover {
+      background-color: #f0b18a;
+    }
+  }
+}
+
+.link {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: toRem(1);
+    background-color: var(--gold);
+    width: 0;
+    transition:
+      left 0.3s,
+      width 0.3s;
+  }
+  html:not([data-fls-touch]) & {
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
